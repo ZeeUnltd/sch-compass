@@ -1,0 +1,1496 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
+
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="assets/fonts/feather/feather.min.css">
+    <link rel="stylesheet" href="assets/libs/highlight.js/styles/vs2015.css">
+    <link rel="stylesheet" href="assets/libs/quill/dist/quill.core.css">
+    <link rel="stylesheet" href="assets/libs/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="assets/libs/flatpickr/dist/flatpickr.min.css">
+
+    <!-- Theme CSS -->
+      
+    <link rel="stylesheet" href="assets/css/theme.min.css" id="stylesheetLight">
+
+    <link rel="stylesheet" href="assets/css/theme-dark.min.css" id="stylesheetDark">
+
+    <style>body { display: none; }</style>
+    
+
+    <title>School Compass</title>
+    <style>
+        .bg-transperent {
+          background: transparent!important;
+        }
+        .hero-img {
+          background: linear-gradient(rgba(0, 255, 102, 0.22), rgb(1, 96, 99)), url(assets/img/covers/cover2.jpg);;
+          height: 80vh;
+          background-size: cover;
+        }
+        .color2 {
+          color: #ff9700
+        }
+        .extra-margin {
+          padding-top: 300px;
+        }
+        .hero-big-text {
+          font-size: 50px;
+        }
+        .bg-white {
+          background: rgb(255, 251, 251);
+        }
+        .card-header-title {
+          font-size: 20px;
+          color: #016064;
+        }
+        .section-header {
+          font-size: 30px;
+          color: #016064;
+        }
+        .card-border {
+          border-color: #016064;
+        }
+        .bg-teal {
+          background: #f1f6f6; 
+        }
+        .sch-details .card-body {
+          padding: 1em;
+        }
+        .big-btn {
+          height: 50px;
+        }
+        .btn-primary {
+          border-color: #016064;
+
+        }
+        .hero-btn {
+          height: 70px;
+          font-size: 1.4em;
+          /* width: 2em; */
+        }
+        .py-xs-5 {
+          padding-top: 5em!important;
+          padding-bottom: 5em!important;
+        }
+        .btn-primary {
+          background: #016064;
+        }
+        .btn-outline-primary {
+          border-color: #016064;
+        }
+        .overlay:hover {
+          background-color: #016064!important;
+          color: #f1f6f6!important;
+        }
+        
+        .overlay:hover .card-header-title {
+          color: #f1f6f6!important;
+        }
+        .text-primary {
+          color: #016064!important;
+        }
+        .sch-img {
+          width: 25em;
+        }
+        .navbar-light .navbar-collapse::before {
+          border-top-color: transparent;
+        }
+
+/* Animated Card */
+
+        /* @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:900'); */
+      .online .card {
+        background: white;
+        border-radius: 8px;
+        /* box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); */
+        cursor: pointer;
+        /* height: 300px; */
+        /* margin: 20px; */
+        padding: 0 20px;
+        position: relative;
+        /* -webkit-tap-highlight-color: rgba(0,0,0,0.025); */
+        text-align: center;
+        transition: height 1000ms;
+        /* width: 260px; */
+      }
+      /* @media (max-width: 767px) {
+        .online .card {
+          left: calc(50% - 20px);
+          transform: translateX(-50%);
+        }
+      } */
+      .online .card.expanded {
+        height: 400px;
+      }
+      .online .label {
+        margin-top: 30px;
+        transform: translateY(10px);
+        transition: transform 1000ms;
+      }
+      .online .card.expanded .label {
+        transform: translateY(0);
+      }
+      .online .text1 {
+        clip-path: polygon(0% 100%, 0 -90%, 50% -5%, 100% -90%, 100% 100%);
+        -webkit-clip-path: polygon(0% 100%, 0 -90%, 50% -5%, 100% -90%, 100% 100%);
+        transition: clip-path 1000ms;
+      }
+      .online .card.expanded .text1 {
+        clip-path: polygon(0% 100%, 0 -100%, 50% -15%, 100% -100%, 100% 100%);
+        -webkit-clip-path: polygon(0% 100%, 0 -100%, 50% -15%, 100% -100%, 100% 100%);
+      }
+      .online .text2 {
+        clip-path: polygon(0% 100%,0% -80%,15% -70%,17.23% -53.59%,23% -40%,27.23% -28.94%,35% -20%,41.09% -13.59%,50% -10%,58.91% -13.23%,65% -20%,72.77% -28.23%,77% -40%,82.77% -54.65%,85% -70%,100% -80%,100% 100%);
+        -webkit-clip-path: polygon(0% 100%,0% -80%,15% -70%,17.23% -53.59%,23% -40%,27.23% -28.94%,35% -20%,41.09% -13.59%,50% -10%,58.91% -13.23%,65% -20%,72.77% -28.23%,77% -40%,82.77% -54.65%,85% -70%,100% -80%,100% 100%);
+        transition: clip-path 1000ms;
+      }
+      .online .card.expanded .text2 {
+        clip-path: polygon(0% 100%,0% -90%,15% -80%,17.23% -63.59%,23% -50%,27.23% -38.94%,35% -30%,41.09% -23.59%,50% -20%,58.91% -23.23%,65% -30%,72.77% -38.23%,77% -50%,82.77% -64.65%,85% -80%,100% -90%,100% 100%);
+        -webkit-clip-path: polygon(0% 100%,0% -90%,15% -80%,17.23% -63.59%,23% -50%,27.23% -38.94%,35% -30%,41.09% -23.59%,50% -20%,58.91% -23.23%,65% -30%,72.77% -38.23%,77% -50%,82.77% -64.65%,85% -80%,100% -90%,100% 100%);
+      }
+      .online .text-content {
+        transform: translateY(-200px);
+        transition: transform 1000ms;
+      }
+      .online .card.expanded .text-content {
+        transform: translateY(-15px);
+      }
+      .online .chevron {
+        position: absolute;
+        bottom: 20px;
+        left: calc(50% - 15px);
+        transform-origin: 50%;
+        transform: rotate(180deg);
+        transition: transform 1000ms;
+      }
+      .online .card.expanded .chevron {
+        transform: rotate(0deg);
+      }
+      .online .title {
+        font-family: 'Alegreya Sans', sans-serif;
+        font-weight: 900;
+        margin: 20px 0 12px;
+      }
+      /* .online .body-text {
+        padding: 0 20px;
+      } */
+/* Animated card end */
+
+        @media screen and (max-width: 550px ) {
+          .mb-xs-5 {
+            margin-bottom: 4em;
+          }
+          .p-xs-1 {
+            padding: 1em !important;
+          }
+          .m-sm-custom {
+            margin: 2em;
+          }
+          .hero-btn {
+            height: 50px;
+            font-size: 1em;
+          }
+          .hero-img{
+            background-position: right;
+          }
+          .p-5 {
+              padding: 1.25rem !important;
+          }
+
+        }
+        .navbar-light .navbar-toggler-icon {
+          filter: brightness(5);
+        }
+    </style>
+  </head>
+  <body>
+
+    <!-- MODALS
+    ================================================== -->
+    
+    <!-- Modal: Demo -->
+    <div class="modal fade fixed-right" id="modalDemo" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-vertical" role="document">
+        <form class="modal-content" id="demoForm">
+          <div class="modal-body">
+        
+            <!-- Close -->
+            <a class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </a>
+
+            <div class="text-center">
+              <img src="assets/img/illustrations/designer-life.svg" alt="..." class="img-fluid mb-3">
+            </div>
+
+            <h2 class="text-center mb-2">
+              Make Dashkit Your Own
+            </h2>
+
+            <p class="text-center mb-4">
+              Set preferences that will be cookied for your live preview demonstration.
+            </p>
+
+            <hr class="mb-4">
+
+            <h4 class="mb-1">
+              Color Scheme
+            </h4>
+
+            <p class="small text-muted mb-3">
+              Overall light or dark presentation.
+            </p>
+
+            <div class="btn-group-toggle d-flex mb-4" data-toggle="buttons">
+              <label class="btn btn-white active col">
+                <input type="radio" name="colorScheme" id="colorSchemeLight" value="light" checked> <i class="fe fe-sun mr-2"></i> Light Mode
+              </label>
+              <label class="btn btn-white col ml-2">
+                <input type="radio" name="colorScheme" id="colorSchemeDark" value="dark"> <i class="fe fe-moon mr-2"></i> Dark Mode
+              </label>
+            </div>
+
+            <h4 class="mb-1">
+              Navigation Position
+            </h4>
+
+            <p class="small text-muted mb-3">
+              Select the primary navigation paradigm for your app.
+            </p>
+
+            <div class="btn-group-toggle d-flex mb-4" data-toggle="buttons">
+              <label class="btn btn-white active col">
+                <input type="radio" name="navPosition" id="navPositionSidenav" value="sidenav" checked> Sidenav
+              </label>
+              <label class="btn btn-white col ml-2">
+                <input type="radio" name="navPosition" id="navPositionTopnav" value="topnav"> Topnav
+              </label>
+              <label class="btn btn-white col ml-2">
+                <input type="radio" name="navPosition" id="navPositionCombo" value="combo"> Combo
+              </label>
+            </div>
+
+            <h4 class="mb-1">
+              Sidebar Color
+            </h4>
+
+            <p class="small text-muted mb-3">
+              Usually dictated by the color scheme, but can be overriden. 
+            </p>
+
+            <div class="btn-group-toggle d-flex mb-4" data-toggle="buttons">
+              <label class="btn btn-white active col">
+                <input type="radio" name="sidebarColor" id="sidebarColorDefault" value="default" checked> Default
+              </label>
+              <label class="btn btn-white col ml-2">
+                <input type="radio" name="sidebarColor" id="sidebarColorVibrant" value="vibrant"> Vibrant
+              </label>
+            </div>
+      
+          </div>
+          <div class="modal-footer border-0">
+        
+            <button type="submit" class="btn btn-block btn-primary mt-auto">
+              Preview
+            </button>
+
+          </div>
+        </form>
+      </div>
+    </div>
+    
+
+    <!-- Modal: Members -->
+    <div class="modal fade" id="modalMembers" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-card card" data-toggle="lists" data-lists-values='["name"]'>
+            <div class="card-header">
+              <div class="row align-items-center">
+                <div class="col">
+
+                  <!-- Title -->
+                  <h4 class="card-header-title" id="exampleModalCenterTitle">
+                    Add a member
+                  </h4>
+              
+                </div>
+                <div class="col-auto">
+
+                  <!-- Close -->
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+              
+                </div>
+              </div> <!-- / .row -->
+            </div>
+            <div class="card-header">
+          
+              <!-- Form -->
+              <form>
+                <div class="input-group input-group-flush input-group-merge">
+                  <input type="search" class="form-control form-control-prepended search" placeholder="Search">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <span class="fe fe-search"></span>
+                    </div>
+                  </div>
+                </div>
+              </form>
+
+            </div>
+            <div class="card-body">
+
+              <!-- List group -->
+              <ul class="list-group list-group-flush list my-n3">
+                <li class="list-group-item px-0">
+              
+                  <div class="row align-items-center">
+                    <div class="col-auto">
+                  
+                      <!-- Avatar -->
+                      <a href="profile-posts.html" class="avatar">
+                        <img src="assets/img/avatars/profiles/avatar-5.jpg" alt="..." class="avatar-img rounded-circle">
+                      </a>
+
+                    </div>
+                    <div class="col ml-n2">
+
+                      <!-- Title -->
+                      <h4 class="mb-1 name">
+                        <a href="profile-posts.html">Miyah Myles</a>
+                      </h4>
+
+                      <!-- Time -->
+                      <p class="small mb-0">
+                        <span class="text-success">●</span> Online
+                      </p>
+                  
+                    </div>
+                    <div class="col-auto">
+                  
+                      <!-- Button -->
+                      <a href="#!" class="btn btn-sm btn-white">
+                        Add
+                      </a>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                </li>
+                <li class="list-group-item px-0">
+              
+                  <div class="row align-items-center">
+                    <div class="col-auto">
+                  
+                      <!-- Avatar -->
+                      <a href="profile-posts.html" class="avatar">
+                        <img src="assets/img/avatars/profiles/avatar-6.jpg" alt="..." class="avatar-img rounded-circle">
+                      </a>
+
+                    </div>
+                    <div class="col ml-n2">
+
+                      <!-- Title -->
+                      <h4 class="mb-1 name">
+                        <a href="profile-posts.html">Ryu Duke</a>
+                      </h4>
+
+                      <!-- Time -->
+                      <p class="small mb-0">
+                        <span class="text-success">●</span> Online
+                      </p>
+                  
+                    </div>
+                    <div class="col-auto">
+                  
+                      <!-- Button -->
+                      <a href="#!" class="btn btn-sm btn-white">
+                        Add
+                      </a>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                </li>
+                <li class="list-group-item px-0">
+              
+                  <div class="row align-items-center">
+                    <div class="col-auto">
+                  
+                      <!-- Avatar -->
+                      <a href="profile-posts.html" class="avatar">
+                        <img src="assets/img/avatars/profiles/avatar-7.jpg" alt="..." class="avatar-img rounded-circle">
+                      </a>
+
+                    </div>
+                    <div class="col ml-n2">
+
+                      <!-- Title -->
+                      <h4 class="mb-1 name">
+                        <a href="profile-posts.html">Glen Rouse</a>
+                      </h4>
+
+                      <!-- Time -->
+                      <p class="small mb-0">
+                        <span class="text-warning">●</span> Busy
+                      </p>
+                  
+                    </div>
+                    <div class="col-auto">
+                  
+                      <!-- Button -->
+                      <a href="#!" class="btn btn-sm btn-white">
+                        Add
+                      </a>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                </li>
+                <li class="list-group-item px-0">
+              
+                  <div class="row align-items-center">
+                    <div class="col-auto">
+                  
+                      <!-- Avatar -->
+                      <a href="profile-posts.html" class="avatar">
+                        <img src="assets/img/avatars/profiles/avatar-8.jpg" alt="..." class="avatar-img rounded-circle">
+                      </a>
+
+                    </div>
+                    <div class="col ml-n2">
+
+                      <!-- Title -->
+                      <h4 class="mb-1 name">
+                        <a href="profile-posts.html">Grace Gross</a>
+                      </h4>
+
+                      <!-- Time -->
+                      <p class="small mb-0">
+                        <span class="text-danger">●</span> Offline
+                      </p>
+                  
+                    </div>
+                    <div class="col-auto">
+                  
+                      <!-- Button -->
+                      <a href="#!" class="btn btn-sm btn-white">
+                        Add
+                      </a>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                </li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: Search -->
+    <div class="modal fade" id="sidebarModalSearch" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-vertical" role="document">
+        <div class="modal-content">
+          <div class="modal-body" data-toggle="lists" data-lists-values='["name"]'>
+     
+            <!-- Form -->
+            <form class="mb-4">
+              <div class="input-group input-group-merge">
+                <input type="search" class="form-control form-control-prepended search" placeholder="Search">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <span class="fe fe-search"></span>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+            <!-- List group -->
+            <div class="my-n3">
+              <div class="list-group list-group-flush list">
+                <a href="team-overview.html" class="list-group-item px-0">
+                  <div class="row align-items-center">
+                    <div class="col-auto">
+                  
+                      <!-- Avatar -->
+                      <div class="avatar">
+                        <img src="assets/img/avatars/teams/team-logo-1.jpg" alt="..." class="avatar-img rounded">
+                      </div>
+
+                    </div>
+                    <div class="col ml-n2">
+
+                      <!-- Title -->
+                      <h4 class="text-body mb-1 name">
+                        Airbnb
+                      </h4>
+
+                      <!-- Time -->
+                      <p class="small text-muted mb-0">
+                        <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 2hr ago</time>
+                      </p>
+                  
+                    </div>
+                  </div> <!-- / .row -->
+                </a>
+                <a href="team-overview.html" class="list-group-item px-0">
+                  <div class="row align-items-center">
+                    <div class="col-auto">
+                  
+                      <!-- Avatar -->
+                      <div class="avatar">
+                        <img src="assets/img/avatars/teams/team-logo-2.jpg" alt="..." class="avatar-img rounded">
+                      </div>
+
+                    </div>
+                    <div class="col ml-n2">
+
+                      <!-- Title -->
+                      <h4 class="text-body mb-1 name">
+                        Medium Corporation
+                      </h4>
+
+                      <!-- Time -->
+                      <p class="small text-muted mb-0">
+                        <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 2hr ago</time>
+                      </p>
+                  
+                    </div>
+                  </div> <!-- / .row -->
+                </a>
+                <a href="project-overview.html" class="list-group-item px-0">
+
+                  <div class="row align-items-center">
+                    <div class="col-auto">
+                  
+                      <!-- Avatar -->
+                      <div class="avatar avatar-4by3">
+                        <img src="assets/img/avatars/projects/project-1.jpg" alt="..." class="avatar-img rounded">
+                      </div>
+
+                    </div>
+                    <div class="col ml-n2">
+
+                      <!-- Title -->
+                      <h4 class="text-body mb-1 name">
+                        Homepage Redesign
+                      </h4>
+
+                      <!-- Time -->
+                      <p class="small text-muted mb-0">
+                        <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 4hr ago</time>
+                      </p>
+                  
+                    </div>
+                  </div> <!-- / .row -->
+
+                </a>
+                <a href="project-overview.html" class="list-group-item px-0">
+
+                  <div class="row align-items-center">
+                    <div class="col-auto">
+                  
+                      <!-- Avatar -->
+                      <div class="avatar avatar-4by3">
+                        <img src="assets/img/avatars/projects/project-2.jpg" alt="..." class="avatar-img rounded">
+                      </div>
+
+                    </div>
+                    <div class="col ml-n2">
+
+                      <!-- Title -->
+                      <h4 class="text-body mb-1 name">
+                        Travels & Time
+                      </h4>
+
+                      <!-- Time -->
+                      <p class="small text-muted mb-0">
+                        <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 4hr ago</time>
+                      </p>
+                  
+                    </div>
+                  </div> <!-- / .row -->
+
+                </a>
+                <a href="project-overview.html" class="list-group-item px-0">
+
+                  <div class="row align-items-center">
+                    <div class="col-auto">
+                  
+                      <!-- Avatar -->
+                      <div class="avatar avatar-4by3">
+                        <img src="assets/img/avatars/projects/project-3.jpg" alt="..." class="avatar-img rounded">
+                      </div>
+
+                    </div>
+                    <div class="col ml-n2">
+
+                      <!-- Title -->
+                      <h4 class="text-body mb-1 name">
+                        Safari Exploration
+                      </h4>
+
+                      <!-- Time -->
+                      <p class="small text-muted mb-0">
+                        <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 4hr ago</time>
+                      </p>
+                  
+                    </div>
+                  </div> <!-- / .row -->
+            
+                </a>
+                <a href="profile-posts.html" class="list-group-item px-0">
+            
+                  <div class="row align-items-center">
+                    <div class="col-auto">
+                  
+                      <!-- Avatar -->
+                      <div class="avatar">
+                        <img src="assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
+                      </div>
+
+                    </div>
+                    <div class="col ml-n2">
+                  
+                      <!-- Title -->
+                      <h4 class="text-body mb-1 name">
+                        Dianna Smiley
+                      </h4>
+
+                      <!-- Status -->
+                      <p class="text-body small mb-0">
+                        <span class="text-success">●</span> Online
+                      </p>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                </a>
+                <a href="profile-posts.html" class="list-group-item px-0">
+
+                  <div class="row align-items-center">
+                    <div class="col-auto">
+                  
+                      <!-- Avatar -->
+                      <div class="avatar">
+                        <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+                      </div>
+
+                    </div>
+                    <div class="col ml-n2">
+                  
+                      <!-- Title -->
+                      <h4 class="text-body mb-1 name">
+                        Ab Hadley
+                      </h4>
+
+                      <!-- Status -->
+                      <p class="text-body small mb-0">
+                        <span class="text-danger">●</span> Offline
+                      </p>
+
+                    </div>
+                  </div> <!-- / .row -->
+            
+                </a>
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: Activity -->
+    <div class="modal fade" id="sidebarModalActivity" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-vertical" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+
+            <!-- Title -->
+            <h4 class="modal-title">
+              Notifications
+            </h4>
+
+            <!-- Close -->
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">
+                &times;
+              </span>
+            </button>
+        
+          </div>
+          <div class="modal-body">
+
+            <!-- List group -->
+            <div class="list-group list-group-flush my-n3">
+              <a class="list-group-item px-0" href="#!">
+          
+                <div class="row">
+                  <div class="col-auto">
+                
+                    <!-- Avatar -->
+                    <div class="avatar avatar-sm">
+                      <img src="assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
+                    </div>
+
+                  </div>
+                  <div class="col ml-n2">
+                
+                    <!-- Content -->
+                    <div class="small text-muted">
+                      <strong class="text-body">Dianna Smiley</strong> shared your post with <strong class="text-body">Ab Hadley</strong>, <strong class="text-body">Adolfo Hess</strong>, and <strong class="text-body">3 others</strong>.
+                    </div>
+
+                  </div>
+                  <div class="col-auto">
+
+                    <small class="text-muted">
+                      2m
+                    </small>
+                
+                  </div>
+                </div> <!-- / .row -->
+
+              </a>
+              <a class="list-group-item px-0" href="#!">
+
+                <div class="row">
+                  <div class="col-auto">
+                
+                    <!-- Avatar -->
+                    <div class="avatar avatar-sm">
+                      <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+                    </div>
+
+                  </div>
+                  <div class="col ml-n2">
+                
+                    <!-- Content -->
+                    <div class="small text-muted">
+                      <strong class="text-body">Ab Hadley</strong> reacted to your post with a 😍
+                    </div>
+
+                  </div>
+                  <div class="col-auto">
+
+                    <small class="text-muted">
+                      2m
+                    </small>
+                
+                  </div>
+                </div> <!-- / .row -->
+
+              </a>
+              <a class="list-group-item px-0" href="#!">
+
+                <div class="row">
+                  <div class="col-auto">
+                
+                    <!-- Avatar -->
+                    <div class="avatar avatar-sm">
+                      <img src="assets/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle">
+                    </div>
+
+                  </div>
+                  <div class="col ml-n2">
+                
+                    <!-- Content -->
+                    <div class="small text-muted">
+                      <strong class="text-body">Adolfo Hess</strong> commented <blockquote class="text-body">“I don’t think this really makes sense to do without approval from Johnathan since he’s the one...” </blockquote>
+                    </div>
+
+                  </div>
+                  <div class="col-auto">
+
+                    <small class="text-muted">
+                      2m
+                    </small>
+                
+                  </div>
+                </div> <!-- / .row -->
+
+              </a>
+              <a class="list-group-item px-0" href="#!">
+
+                <div class="row">
+                  <div class="col-auto">
+                
+                    <!-- Avatar -->
+                    <div class="avatar avatar-sm">
+                      <img src="assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
+                    </div>
+
+                  </div>
+                  <div class="col ml-n2">
+                
+                    <!-- Content -->
+                    <div class="small text-muted">
+                      <strong class="text-body">Daniela Dewitt</strong> subscribed to you.
+                    </div>
+
+                  </div>
+                  <div class="col-auto">
+
+                    <small class="text-muted">
+                      2m
+                    </small>
+                
+                  </div>
+                </div> <!-- / .row -->
+
+              </a>
+              <a class="list-group-item px-0" href="#!">
+
+                <div class="row">
+                  <div class="col-auto">
+                
+                    <!-- Avatar -->
+                    <div class="avatar avatar-sm">
+                      <img src="assets/img/avatars/profiles/avatar-5.jpg" alt="..." class="avatar-img rounded-circle">
+                    </div>
+
+                  </div>
+                  <div class="col ml-n2">
+                
+                    <!-- Content -->
+                    <div class="small text-muted">
+                      <strong class="text-body">Miyah Myles</strong> shared your post with <strong class="text-body">Ryu Duke</strong>, <strong class="text-body">Glen Rouse</strong>, and <strong class="text-body">3 others</strong>.
+                    </div>
+
+                  </div>
+                  <div class="col-auto">
+
+                    <small class="text-muted">
+                      2m
+                    </small>
+                
+                  </div>
+                </div> <!-- / .row -->
+
+              </a>
+              <a class="list-group-item px-0" href="#!">
+
+                <div class="row">
+                  <div class="col-auto">
+                
+                    <!-- Avatar -->
+                    <div class="avatar avatar-sm">
+                      <img src="assets/img/avatars/profiles/avatar-6.jpg" alt="..." class="avatar-img rounded-circle">
+                    </div>
+
+                  </div>
+                  <div class="col ml-n2">
+                
+                    <!-- Content -->
+                    <div class="small text-muted">
+                      <strong class="text-body">Ryu Duke</strong> reacted to your post with a 😍
+                    </div>
+
+                  </div>
+                  <div class="col-auto">
+
+                    <small class="text-muted">
+                      2m
+                    </small>
+                
+                  </div>
+                </div> <!-- / .row -->
+
+              </a>
+              <a class="list-group-item px-0" href="#!">
+
+                <div class="row">
+                  <div class="col-auto">
+                
+                    <!-- Avatar -->
+                    <div class="avatar avatar-sm">
+                      <img src="assets/img/avatars/profiles/avatar-7.jpg" alt="..." class="avatar-img rounded-circle">
+                    </div>
+
+                  </div>
+                  <div class="col ml-n2">
+                
+                    <!-- Content -->
+                    <div class="small text-muted">
+                      <strong class="text-body">Glen Rouse</strong> commented <blockquote class="text-body">“I don’t think this really makes sense to do without approval from Johnathan since he’s the one...” </blockquote>
+                    </div>
+
+                  </div>
+                  <div class="col-auto">
+
+                    <small class="text-muted">
+                      2m
+                    </small>
+                
+                  </div>
+                </div> <!-- / .row -->
+
+              </a>
+              <a class="list-group-item px-0" href="#!">
+
+                <div class="row">
+                  <div class="col-auto">
+                
+                    <!-- Avatar -->
+                    <div class="avatar avatar-sm">
+                      <img src="assets/img/avatars/profiles/avatar-8.jpg" alt="..." class="avatar-img rounded-circle">
+                    </div>
+
+                  </div>
+                  <div class="col ml-n2">
+                
+                    <!-- Content -->
+                    <div class="small text-muted">
+                      <strong class="text-body">Grace Gross</strong> subscribed to you.
+                    </div>
+
+                  </div>
+                  <div class="col-auto">
+
+                    <small class="text-muted">
+                      2m
+                    </small>
+                
+                  </div>
+                </div> <!-- / .row -->
+
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NAVIGATION
+    ================================================== -->
+    
+    <div class="hero-img">
+      
+      <div class="navbar navbar-expand-lg navbar-light border-0 px-lg-6 bg-transperent position-sticky" >
+          <a class="navbar-brand" href="#"> <img src="./assets/img/sch-comapss-logo2.svg"> </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon navbar-white"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse text-right ml-auto" id="navbarSupportedContent">
+            <!-- <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+              </li>
+            </ul> -->
+            <form class="form-inline my-2 ml-lg-0">
+              <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+              <span class="text-light"> +2348011111111</span>
+              <button class="btn link my-2 text-light my-sm-0 mx-md-5" type="submit">Search</button>
+              <button class="btn btn-light my-2 my-sm-0" type="submit">Profile your school</button>
+            </form>
+          </div>
+      </div>
+      <div >
+          <div class="text-center mt-lg-5">
+            <div class="mt-lg-8 ">
+              <h1 class="font-weight-bold hero-big-text text-light pt-6">
+                  Find the <span class="color2"> ideal</span>  school for your child
+              </h1>
+              <h4 class="text-light mt-5">
+                  Search through 2,450 schools in Nigeria
+              </h4>
+              <div class="btn-sets mt-5">
+  
+                  <button class="btn my-2 my-sm-0 font-weight-bolder hero-btn btn-light" type="submit">Primary & Pre-Schools</button>
+                  <button type="button" class="btn btn-outline-light hero-btn ml-md-5 ml-sm-2 m-sm-custom text-truncate ">Secondary & A-Level Schools</button>
+              </div>
+            </div>
+            <!-- <div class="col-6 text-right text-custom">
+                <div class="hero-img">
+                    <img src="../../statics/images/hero-img.svg" alt="">
+                </div>
+            </div> -->
+        </div>
+
+      </div>
+    </div>
+    
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <section class="bg-white text-center py-lg-8 py-xs-5 py-5">
+      <h1 class="section-header mt-5">
+        Top Cities
+      </h1>
+      <h4 class="text-muted mt-4">
+        See our top schools based on educational standard
+      </h4>
+      <div class="px-lg-2 mt-6 container">
+        <div class="px-lg-6 row justify-content-lg-between justify-content-sm-around">
+          <div class="col-md-3 col-xs-12 col-sm-12 hover-card">
+            <div class="card bg-transperent rounded-lg p-4 shadow-none card-border overlay">
+              <h4 class="card-header-title">
+                Lagos
+              </h4>
+              <p class="text-muted mt-3">
+                55, 3000 Schools
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3 col-xs-12 col-sm-12">
+            <div class="card bg-transperent rounded-lg p-4 shadow-none card-border overlay">
+              <h4 class="card-header-title">
+                Lagos
+              </h4>
+              <p class="text-muted mt-3">
+                55, 3000 Schools
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3 col-xs-12 col-sm-12">
+            <div class="card bg-transperent rounded-lg p-4 shadow-none card-border overlay">
+              <h4 class="card-header-title">
+                Lagos
+              </h4>
+              <p class="text-muted mt-3">
+                55, 3000 Schools
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3 col-xs-12 col-sm-12">
+            <div class="card bg-transperent rounded-lg p-4 shadow-none card-border overlay">
+              <h4 class="card-header-title">
+                Lagos
+              </h4>
+              <p class="text-muted mt-3">
+                55, 3000 Schools
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3 col-xs-12 col-sm-12">
+            <div class="card bg-transperent rounded-lg p-4 shadow-none card-border overlay">
+              <h4 class="card-header-title">
+                Lagos
+              </h4>
+              <p class="text-muted mt-3">
+                55, 3000 Schools
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3 col-xs-12 col-sm-12">
+            <div class="card bg-transperent rounded-lg p-4 shadow-none card-border overlay">
+              <h4 class="card-header-title">
+                Lagos
+              </h4>
+              <p class="text-muted mt-3">
+                55, 3000 Schools
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3 col-xs-12 col-sm-12">
+            <div class="card bg-transperent rounded-lg p-4 shadow-none card-border overlay">
+              <h4 class="card-header-title">
+                Lagos
+              </h4>
+              <p class="text-muted mt-3">
+                55, 3000 Schools
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3 col-xs-12 col-sm-12">
+            <div class="card bg-transperent rounded-lg p-4 shadow-none card-border overlay">
+              <h4 class="card-header-title">
+                Lagos
+              </h4>
+              <p class="text-muted mt-3">
+                55, 3000 Schools
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section class="text-center py-lg-8 py-xs-5 bg-teal py-5">
+        <h1 class="section-header mt-5">
+          Featured Schools
+        </h1>
+        <h4 class="text-muted mt-4">
+          See our top schools based on educational standard
+        </h4>
+        <div class="px-lg-2 container mt-6 ">
+          <div class="row justify-content-around p-xs-1">
+            <div class="card col-md-3 col-xs-12 col-sm-12 sch-details p-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-auto">
+                    
+                    <a href="#" class="avatar avatar-lg">
+                      <img src="assets/img/avatars/teams/team-logo-1.jpg" alt="..." class="avatar-img rounded">
+                    </a>
+            
+                  </div>
+                  <div class="col ml-n2 text-left">
+            
+                    <h4 class="card-title mb-1 name">
+                      <a href="#"> ₦300k - ₦500k</a>
+                    </h4>
+            
+                    <p class="card-text small text-muted mb-1">
+                      Monthly payment available
+                    </p>
+            
+                    <p class="card-text small text-muted">
+                      <i class="fe fe-clock"></i> Updated 2hr ago
+                    </p>
+                    
+                  </div>
+                  <div class="col-auto">
+                    
+                    <div class="dropdown">
+                      <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fe fe-more-vertical"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a href="#!" class="dropdown-item">
+                          Pictures
+                        </a>
+                        <a href="#!" class="dropdown-item">
+                          Details
+                        </a>
+                        <a href="#!" class="dropdown-item">
+                          More Details
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <img class="card-img-bottom" src="assets/img/posts/post-1.jpg" alt="Card image cap">
+            </div>
+            <div class="card col-md-3 col-xs-12 col-sm-12 sch-details p-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-auto">
+                    
+                    <a href="#" class="avatar avatar-lg">
+                      <img src="assets/img/avatars/teams/team-logo-1.jpg" alt="..." class="avatar-img rounded">
+                    </a>
+            
+                  </div>
+                  <div class="col ml-n2 text-left">
+            
+                    <h4 class="card-title mb-1 name">
+                      <a href="#"> ₦300k - ₦500k</a>
+                    </h4>
+            
+                    <p class="card-text small text-muted mb-1">
+                      Monthly payment available
+                    </p>
+            
+                    <p class="card-text small text-muted">
+                      <i class="fe fe-clock"></i> Updated 2hr ago
+                    </p>
+                    
+                  </div>
+                  <div class="col-auto">
+                    
+                    <div class="dropdown">
+                      <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fe fe-more-vertical"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a href="#!" class="dropdown-item">
+                          Pictures
+                        </a>
+                        <a href="#!" class="dropdown-item">
+                          Details
+                        </a>
+                        <a href="#!" class="dropdown-item">
+                          More Details
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <img class="card-img-bottom" src="assets/img/posts/post-1.jpg" alt="Card image cap">
+            </div>
+            <div class="card col-md-3 col-xs-12 col-sm-12 sch-details p-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-auto">
+                    
+                    <a href="#" class="avatar avatar-lg">
+                      <img src="assets/img/avatars/teams/team-logo-1.jpg" alt="..." class="avatar-img rounded">
+                    </a>
+            
+                  </div>
+                  <div class="col ml-n2 text-left">
+            
+                    <h4 class="card-title mb-1 name">
+                      <a href="#"> ₦300k - ₦500k</a>
+                    </h4>
+            
+                    <p class="card-text small text-muted mb-1">
+                      Monthly payment available
+                    </p>
+            
+                    <p class="card-text small text-muted">
+                      <i class="fe fe-clock"></i> Updated 2hr ago
+                    </p>
+                    
+                  </div>
+                  <div class="col-auto">
+                    
+                    <div class="dropdown">
+                      <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fe fe-more-vertical"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a href="#!" class="dropdown-item">
+                          Pictures
+                        </a>
+                        <a href="#!" class="dropdown-item">
+                          Details
+                        </a>
+                        <a href="#!" class="dropdown-item">
+                          More Details
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <img class="card-img-bottom" src="assets/img/posts/post-1.jpg" alt="Card image cap">
+            </div>
+          </div>
+          <div class="online row justify-content-around">
+            <div class="col-md-4 col-xs-12 col-sm-12">
+              <div class="card" onclick="this.classList.toggle('expanded')">
+                  <div class="text-muted text-left mt-3">
+                    <div class="">
+                        ₦300k - ₦500k
+                    </div>
+                    <div class="c">
+                      Monthly payment available
+                    </div>
+                  </div>
+                <div class="bg-white">
+                  <img src="./assets/img/sch-2.jpg"/>
+                </div>
+                  <div class="text1">
+                    <div class="text-content text-muted">
+                      <h1 class="title">Brief Info</h1>
+                      <div class="body-text">are delivered with the same high quality as decades ago</div>
+                    </div>
+                  </div>
+                  <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 35" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#016064" stroke-width="5"/></svg>
+              </div>
+            </div> 
+            <div class="col-md-4 col-xs-12 col-sm-12">
+              <div class="card" onclick="this.classList.toggle('expanded')">
+                  <div class="text-muted text-left mt-3">
+                    <div class="">
+                        ₦300k - ₦500k
+                    </div>
+                    <div class="c">
+                      Monthly payment available
+                    </div>
+                  </div>
+                <div class="bg-white">
+                  <img src="./assets/img/sch-1.jpg"/>
+                </div>
+                  <div class="text1">
+                    <div class="text-content text-muted">
+                      <h1 class="title">Brief Info</h1>
+                      <div class="body-text">are delivered with the same high quality as decades ago</div>
+                    </div>
+                  </div>
+                  <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 35" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#016064" stroke-width="5"/></svg>
+              </div>
+            </div>
+            <div class="col-md-4 col-xs-12 col-sm-12">
+              <div class="card" onclick="this.classList.toggle('expanded')">
+                  <div class="text-muted text-left mt-3">
+                    <div class="row justify-content-between">
+                      <div class="col-8 text-left">
+                        ₦300k - ₦500k
+                      </div>
+                      <div class="col-4 text-right">
+                        Reviews
+                      </div>
+                    </div>
+                    <div class="c">
+                      Monthly payment available
+                    </div>
+                  </div>
+                <div class="bg-white">
+                  <img src="./assets/img/sch-3.jpg"/>
+                </div>
+                  <div class="text1">
+                    <div class="text-content text-muted">
+                      <h1 class="title">Brief Info</h1>
+                      <div class="body-text">are delivered with the same high quality as decades ago</div>
+                    </div>
+                  </div>
+                  <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 35" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#016064" stroke-width="5"/></svg>
+              </div>
+            </div>
+                
+          </div>
+            
+        </div>
+  
+    </section>
+    <section class="bg-white text-center py-lg-8 py-xs-5 py-5">
+      <div class="px-lg-2 container mt-6">
+        <div class="px-lg-4 row justify-content-between">
+          <div class="col-md-7 col-sm-12 col-xs-12 mb-xs-5">
+            <h1 class="display-3 text-left mt-5 text-primary">
+              Become a Schoolable Parent 
+              pay fees monthly...
+            </h1>
+            <br>
+            <div class="text-left">
+              <button type="button" class="btn btn-outline-primary hero-btn text-truncate">Get Started</button>
+            </div>
+          </div>
+          <div class="col-md-5 col-sm-12 col-xs-12">
+            <img src="./assets/img/iphone-schoolable.png" class="sch-img"/>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section class="text-center py-lg-8 py-xs-5 bg-teal py-5">
+        <h1 class="section-header mt-5">
+          More enrolments in your school 
+        </h1>
+        <h4 class="text-muted mt-4">
+          Find out why 2,500 school administrators trust Schools Compass 
+        </h4>
+        <div class="text-center mt-5">
+            <button type="button" class="btn btn-outline-primary hero-btn btn-lg text-truncate">Profile your school</button>
+        </div>
+    </section>
+    <section class="bg-white text-center py-lg-8 py-5">
+      <div class="px-lg-2 container mt-3">
+          <div class="">
+              <h1 class="section-header">
+                Schools Compass in the news
+              </h1>
+        </div>
+        <div class="row justify-content-around my-5 py-md-4">
+            <div class="col-md-5 mb-sm-4 mb-xs-5 col-lg-2 ">
+                <img src="./assets/img/the-guardian.svg" alt="">
+            </div>
+            <div class="col-md-5 mb-sm-4 mb-xs-5 col-lg-2 ">
+                <img src="./assets/img/cnn-logo.svg" alt="">
+            </div>
+            <div class="col-md-5 mb-sm-4 mb-xs-5 col-lg-2 ">
+                <img src="./assets/img/bbc.svg" alt="">
+            </div>
+            <div class="col-md-5 mb-sm-4 mb-xs-5 col-lg-2 ">
+                <img src="./assets/img/the-guardian.svg" alt="">
+            </div>
+            <div class="col-md-5 mb-sm-4 mb-xs-5 col-lg-2 ">
+                <img src="./assets/img/cnn-logo.svg" alt="">
+            </div>
+        </div>
+      </div>
+
+    </section>
+
+      <!-- HEADER -->
+     
+     <!-- / .main-content -->
+
+    <footer class="pt-5 bg-white" style="padding-top: 125px">
+        <div class="px-md-8 row m-auto">
+            <div class="col-6 col-md">
+            <h2 class="text-primary">Terms & Conditions</h2>
+            <ul class="list-unstyled">
+                <li><a class="text-muted" href="#">Cool stuff</a></li>
+                <li><a class="text-muted" href="#">Random feature</a></li>
+                <li><a class="text-muted" href="#">Team feature</a></li>
+                <li><a class="text-muted" href="#">Stuff for developers</a></li>
+                <li><a class="text-muted" href="#">Another one</a></li>
+                <li><a class="text-muted" href="#">Last time</a></li>
+            </ul>
+            </div>
+            <div class="col-6 col-md">
+            <h2 class="text-primary">Join Our Community</h2>
+            <ul class="list-unstyled">
+                <li><a class="text-muted" href="#">Resource</a></li>
+                <li><a class="text-muted" href="#">Resource name</a></li>
+                <li><a class="text-muted" href="#">Another resource</a></li>
+                <li><a class="text-muted" href="#">Final resource</a></li>
+            </ul>
+            </div>
+            <div class="col-6 col-md">
+            <h2 class="text-primary">Schools Compass</h2>
+            <ul class="list-unstyled">
+                <li><a class="text-muted" href="#">Business</a></li>
+                <li><a class="text-muted" href="#">Education</a></li>
+                <li><a class="text-muted" href="#">Government</a></li>
+                <li><a class="text-muted" href="#">Gaming</a></li>
+            </ul>
+            </div>
+            <div class="col-6 col-md">
+            <h2 class="text-primary">Follow our social media</h2>
+            <!-- <ul class="list-unstyled">
+                <li><a class="text-muted" href="#">Team</a></li>
+                <li><a class="text-muted" href="#">Locations</a></li>
+                <li><a class="text-muted" href="#">Privacy</a></li>
+                <li><a class="text-muted" href="#">Terms</a></li>
+            </ul> -->
+            </div>
+        </div>
+    </footer>
+    <div class="text-left p-5 border-top bg-white"> Copyright Schools Compass Technologies 2018</div>
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    <!-- Libs JS -->
+    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/chart.js/dist/Chart.min.js"></script>
+    <script src="assets/libs/highlightjs/highlight.pack.min.js"></script>
+    <script src="assets/libs/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="assets/libs/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+    <script src="assets/libs/list.js/dist/list.min.js"></script>
+    <script src="assets/libs/quill/dist/quill.min.js"></script>
+    <script src="assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+    <script src="assets/libs/select2/dist/js/select2.min.js"></script>
+    <script src="assets/libs/chart.js/Chart.extension.min.js"></script>
+
+    <!-- Theme JS -->
+    <script src="assets/js/theme.min.js"></script>
+
+  </body>
+</html>
